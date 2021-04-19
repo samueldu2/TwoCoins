@@ -30,6 +30,8 @@ public class TwoCoinsChain {
 		walletA = new Wallet();
 		walletB = new Wallet();		
 		Wallet coinbase = new Wallet();
+		//somecomments
+		System.out.println("added");
 		
 		//create genesis transaction, which sends $1,000,000,000,000 (one trillion $) TwoCoins to walletA: 
 		genesisTransaction = new Transaction(coinbase.publicKey, walletA.publicKey, 1000000000000f, null);
@@ -42,6 +44,7 @@ public class TwoCoinsChain {
 		Block genesis = new Block("0");
 		genesis.addTransaction(genesisTransaction);
 		addBlock(genesis);
+		
 		
 		//testing
 		Block block1 = new Block(genesis.hash);
